@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chaveiro Londrina 24h | Emergência e Residencial</title>
+    <!-- AJUSTE PARA GOOGLE ADS: O título abaixo é o que o Google lê primeiro -->
+    <title>Chaveiro Automotivo e Residencial 24h | Londrina</title>
+    <meta name="description" content="Chaveiro 24h em Londrina. Especialista em chaves automotivas codificadas e abertura residencial técnica. Atendimento rápido em toda a região.">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #ffcc00; /* Amarelo Chaveiro */
+            --primary-color: #ffcc00; 
             --dark-color: #1a1a1a;
             --light-color: #ffffff;
-            --success-color: #25d366; /* Cor WhatsApp */
-            --phone-color: #007bff;   /* Cor Azul para Ligação */
+            --success-color: #25d366; 
+            --phone-color: #007bff;   
         }
 
         body {
@@ -22,7 +25,6 @@
             color: var(--dark-color);
         }
 
-        /* Header e Hero Section */
         header {
             background-color: var(--dark-color);
             color: var(--light-color);
@@ -42,12 +44,11 @@
         h1 { margin: 20px 0; font-size: 2.5rem; }
         p { font-size: 1.2rem; margin-bottom: 30px; }
 
-        /* Container de Botões no Topo */
         .cta-container {
             display: flex;
             justify-content: center;
             gap: 15px;
-            flex-wrap: wrap; /* Para quebrar linha no celular se necessário */
+            flex-wrap: wrap;
         }
 
         .cta-button {
@@ -73,7 +74,13 @@
             filter: brightness(1.1);
         }
 
-        /* Serviços */
+        /* OPÇÃO 2: EFEITO DE PULSO NO WHATSAPP */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
         .services {
             padding: 50px 20px;
             max-width: 1000px;
@@ -93,7 +100,6 @@
 
         .card i { font-size: 2.5rem; color: var(--dark-color); margin-bottom: 15px; }
 
-        /* BOTÕES FLUTUANTES */
         .float-btn {
             position: fixed;
             width: 60px;
@@ -111,7 +117,14 @@
             transition: transform 0.2s;
         }
 
-        .whatsapp-float { bottom: 100px; right: 25px; background-color: var(--success-color); }
+        /* Aplicando o pulso ao botão flutuante do Whats */
+        .whatsapp-float { 
+            bottom: 100px; 
+            right: 25px; 
+            background-color: var(--success-color);
+            animation: pulse 2s infinite; 
+        }
+        
         .phone-float { bottom: 100px; left: 25px; background-color: var(--phone-color); }
 
         .float-label {
@@ -127,7 +140,6 @@
             white-space: nowrap;
         }
 
-        /* Footer */
         footer {
             background: var(--dark-color);
             color: white;
@@ -140,7 +152,6 @@
             h1 { font-size: 1.8rem; }
             .cta-container { flex-direction: column; align-items: center; }
             .cta-button { width: 90%; }
-            .whatsapp-float, .phone-float { bottom: 80px; }
         }
     </style>
 </head>
@@ -148,15 +159,16 @@
 
     <header>
         <span class="badge">Atendimento Rápido em Londrina</span>
-        <h1>Chaveiro 24 Horas em Londrina</h1>
-        <p>Aberturas residenciais, automotivas e chaves codificadas com quem entende.</p>
+        <!-- Título principal ajustado para SEO e clareza -->
+        <h1>Chaveiro Automotivo e Residencial 24h</h1>
+        <p>Aberturas emergenciais, chaves codificadas e fechaduras em Londrina.</p>
         
-        <!-- Dois Botões Lado a Lado -->
         <div class="cta-container">
             <a href="https://wa.me/5543996780757?text=Preciso%20de%20um%20chaveiro!" class="cta-button btn-whatsapp">
                 <i class="fab fa-whatsapp"></i> WhatsApp
             </a>
-            <a href="tel:5543996780757" class="cta-button btn-phone">
+            <!-- OPÇÃO 4: AJUSTE TELEFÔNICO COM +55 -->
+            <a href="tel:+5543996780757" class="cta-button btn-phone">
                 <i class="fas fa-phone-alt"></i> Ligar Agora
             </a>
         </div>
@@ -176,12 +188,12 @@
         <div class="card">
             <i class="fas fa-clock"></i>
             <h3>Plantão 24h</h3>
-            <p>Emergências a qualquer hora do dia ou da noite em toda Londrina e região.</p>
+            <p>Emergências a qualquer hora em toda Londrina e região.</p>
         </div>
     </section>
 
-    <!-- Botões Flutuantes Mantidos para Navegação Constante -->
-    <a href="tel:5543996780757" class="float-btn phone-float" title="Ligar Agora">
+    <!-- OPÇÃO 4: AJUSTE TELEFÔNICO NO BOTÃO FLUTUANTE -->
+    <a href="tel:+5543996780757" class="float-btn phone-float" title="Ligar Agora">
         <i class="fas fa-phone-alt"></i>
         <span class="float-label">LIGAR</span>
     </a>
@@ -193,6 +205,7 @@
 
     <footer>
         <p>&copy; 2026 Chaveiro Londrina - Atendimento em domicílio.</p>
+        <p><small>Aceitamos PIX e Cartões de Crédito/Débito</small></p>
         <p><small>Gleba Palhano | Centro | Zona Norte | Zona Sul</small></p>
     </footer>
 
