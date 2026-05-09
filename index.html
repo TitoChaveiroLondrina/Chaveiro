@@ -40,23 +40,38 @@
         }
 
         h1 { margin: 20px 0; font-size: 2.5rem; }
-        p { font-size: 1.2rem; }
+        p { font-size: 1.2rem; margin-bottom: 30px; }
 
-        /* Botão Principal */
-        .cta-button {
-            display: inline-block;
-            background-color: var(--success-color);
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 1.3rem;
-            margin-top: 20px;
-            transition: transform 0.3s;
+        /* Container de Botões no Topo */
+        .cta-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap; /* Para quebrar linha no celular se necessário */
         }
 
-        .cta-button:hover { transform: scale(1.05); }
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: transform 0.3s, filter 0.3s;
+            min-width: 220px;
+        }
+
+        .btn-whatsapp { background-color: var(--success-color); }
+        .btn-phone { background-color: var(--phone-color); }
+
+        .cta-button:hover { 
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
 
         /* Serviços */
         .services {
@@ -96,28 +111,14 @@
             transition: transform 0.2s;
         }
 
-        .float-btn:hover { transform: scale(1.1); }
+        .whatsapp-float { bottom: 100px; right: 25px; background-color: var(--success-color); }
+        .phone-float { bottom: 100px; left: 25px; background-color: var(--phone-color); }
 
-        /* WhatsApp - Lado Direito (Mais para cima como pedido) */
-        .whatsapp-float {
-            bottom: 100px; /* Aumentado para ficar mais visível */
-            right: 25px;
-            background-color: var(--success-color);
-        }
-
-        /* Telefone - Lado Esquerdo */
-        .phone-float {
-            bottom: 100px;
-            left: 25px;
-            background-color: var(--phone-color);
-        }
-
-        /* Legendas para os botões (opcional, melhora conversão) */
         .float-label {
             position: absolute;
             background: white;
             color: #333;
-            font-size: 12px;
+            font-size: 11px;
             padding: 2px 8px;
             border-radius: 10px;
             font-weight: bold;
@@ -137,6 +138,8 @@
 
         @media (max-width: 600px) {
             h1 { font-size: 1.8rem; }
+            .cta-container { flex-direction: column; align-items: center; }
+            .cta-button { width: 90%; }
             .whatsapp-float, .phone-float { bottom: 80px; }
         }
     </style>
@@ -147,9 +150,16 @@
         <span class="badge">Atendimento Rápido em Londrina</span>
         <h1>Chaveiro 24 Horas em Londrina</h1>
         <p>Aberturas residenciais, automotivas e chaves codificadas com quem entende.</p>
-        <a href="https://wa.me/5543996780757?text=Preciso%20de%20um%20chaveiro%20agora" class="cta-button">
-            <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
-        </a>
+        
+        <!-- Dois Botões Lado a Lado -->
+        <div class="cta-container">
+            <a href="https://wa.me/5543996780757?text=Preciso%20de%20um%20chaveiro!" class="cta-button btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="tel:5543996780757" class="cta-button btn-phone">
+                <i class="fas fa-phone-alt"></i> Ligar Agora
+            </a>
+        </div>
     </header>
 
     <section class="services">
@@ -170,14 +180,13 @@
         </div>
     </section>
 
-    <!-- Botão Flutuante LIGAÇÃO (Esquerda) -->
+    <!-- Botões Flutuantes Mantidos para Navegação Constante -->
     <a href="tel:5543996780757" class="float-btn phone-float" title="Ligar Agora">
         <i class="fas fa-phone-alt"></i>
         <span class="float-label">LIGAR</span>
     </a>
 
-    <!-- Botão Flutuante WHATSAPP (Direita) -->
-    <a href="https://wa.me/5543996780757" class="float-btn whatsapp-float" target="_blank" title="Chamar no WhatsApp">
+    <a href="https://wa.me/5543996780757?text=Preciso%20de%20um%20chaveiro!" class="float-btn whatsapp-float" target="_blank" title="Chamar no WhatsApp">
         <i class="fab fa-whatsapp"></i>
         <span class="float-label">WHATSAPP</span>
     </a>
