@@ -92,7 +92,6 @@
         .btn-whatsapp { background-color: var(--success-color); }
         .btn-phone { background-color: var(--phone-color); }
 
-        /* --- ANIMAÇÕES DE PULSO --- */
         @keyframes pulse-green {
             0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
             70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
@@ -124,7 +123,6 @@
 
         .card i { font-size: 2.5rem; margin-bottom: 15px; color: var(--dark-color); }
 
-        /* BOTÕES FLUTUANTES */
         .float-btn {
             position: fixed;
             width: 65px;
@@ -192,9 +190,11 @@
         <p class="subtitle">Emergências automotivas e residenciais. Chegamos rápido!</p>
         
         <div class="cta-container">
-            <a href="https://wa.me/5543996780757?text=Preciso%20de%20ajuda%20com%20uma%20chave!" class="cta-button btn-whatsapp">
+            <!-- Botão WhatsApp 1 (Principal) -->
+            <a href="https://wa.me/5543996780757?text=Preciso%20de%20ajuda%20com%20uma%20chave!" class="cta-button btn-whatsapp" target="_blank" rel="noopener">
                 <i class="fab fa-whatsapp"></i> WhatsApp
             </a>
+            <!-- Botão Ligação 1 (Principal) -->
             <a href="tel:+5543996780757" class="cta-button btn-phone">
                 <i class="fas fa-phone-alt"></i> Ligar Agora
             </a>
@@ -219,14 +219,14 @@
         </div>
     </section>
 
-    <!-- Botão de Ligação com Pulso Azul -->
+    <!-- Botão de Ligação 2 (Flutuante) -->
     <a href="tel:+5543996780757" class="float-btn phone-float">
         <i class="fas fa-phone-alt"></i>
         <span class="float-label">LIGAR</span>
     </a>
 
-    <!-- Botão de WhatsApp com Pulso Verde -->
-    <a href="https://wa.me/5543996780757?text=Preciso%20de%20um%20chaveiro!" class="float-btn whatsapp-float" target="_blank">
+    <!-- Botão de WhatsApp 2 (Flutuante) -->
+    <a href="https://wa.me/5543996780757?text=Preciso%20de%20ajuda%20com%20uma%20chave!" class="float-btn whatsapp-float" target="_blank" rel="noopener">
         <i class="fab fa-whatsapp"></i>
         <span class="float-label">WHATSAPP</span>
     </a>
